@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Equação do 2º Grau</title>
+    <script>
+        // Função que será executada assim que a página carregar
+        window.onload = function() {
+            // Solicitando os valores de a, b e c para a equação do 2º grau
+            let a = parseFloat(prompt("Digite o valor de 'a':"));
+            let b = parseFloat(prompt("Digite o valor de 'b':"));
+            let c = parseFloat(prompt("Digite o valor de 'c':"));
+
+            // Calculando o valor de delta (b² - 4ac)
+            let delta = b * b - 4 * a * c;
+
+            // Exibindo o valor de delta
+            alert("O valor de delta (Δ) é: " + delta);
+
+            // Verificando as condições para as raízes
+            if (delta < 0) {
+                alert("Delta menor que zero. Não tem raízes reais.");
+            } else if (delta === 0) {
+                // Calculando a única raiz (quando delta é igual a 0)
+                let raizUnica = -b / (2 * a);
+                alert("Delta igual a zero. Tem uma raiz real: " + raizUnica);
+            } else {
+                // Calculando as duas raízes (quando delta é maior que 0)
+                let raiz1 = (-b + Math.sqrt(delta)) / (2 * a);
+                let raiz2 = (-b - Math.sqrt(delta)) / (2 * a);
+                alert("Delta maior que zero. Tem duas raízes reais:\nRaiz 1: " + raiz1 + "\nRaiz 2: " + raiz2);
+            }
+        };
+    </script>
+</head>
+<body>
+</body>
+</html>

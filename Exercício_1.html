@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenar Nomes</title>
+    <script>
+        // Função que será executada assim que a página carregar
+        window.onload = function() {
+            let nomes = [];
+
+            // Recebendo 20 nomes usando prompt
+            for (let i = 1; i <= 20; i++) {
+                let nome = prompt("Digite o nome " + i + ":");
+                nomes.push(nome);
+            }
+
+            // Ordenando os nomes em ordem alfabética
+            nomes.sort();
+
+            // Exibindo os nomes em ordem alfabética usando alert
+            let resultado = "Nomes em ordem alfabética:\n";
+            for (let i = 0; i < nomes.length; i++) {
+                resultado += nomes[i] + "\n";
+            }
+
+            alert(resultado); // Exibindo o resultado com um alert
+        };
+    </script>
+</head>
+<body>
+</body>
+</html>
